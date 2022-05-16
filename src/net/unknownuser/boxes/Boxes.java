@@ -43,7 +43,7 @@ public abstract class Boxes {
 	 * @param list The strings to be put in the boxes.
 	 * @return The box of strings.
 	 */
-	public static String printHorizontalMultiBox(String... list) {
+	public static String createHorizontalMultiBox(String... list) {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("┌" + "─".repeat(list[0].length() + 2));
@@ -69,8 +69,8 @@ public abstract class Boxes {
 	 * @param list The string array containing the strings to be put in the boxes.
 	 * @return The box of strings.
 	 */
-	public static String printHorizontalMultiBox(List<String> list) {
-		return printHorizontalMultiBox(list.toArray(new String[list.size()]));
+	public static String createHorizontalMultiBox(List<String> list) {
+		return createHorizontalMultiBox(list.toArray(new String[list.size()]));
 	}
 	
 	/**
@@ -79,7 +79,7 @@ public abstract class Boxes {
 	 * @param list The string array containing the strings to be put in the boxes.
 	 * @return The box of strings.
 	 */
-	public static String printVerticalMultiBox(String... list) {
+	public static String createVerticalMultiBox(String... list) {
 		StringBuilder sb = new StringBuilder();
 		
 		int maxLength = getMaxStringLength(list) + 2;
@@ -105,8 +105,8 @@ public abstract class Boxes {
 	 * @param list The string array containing the strings to be put in the boxes.
 	 * @return The box of strings.
 	 */
-	public static String printVerticalMultiBox(List<String> list) {
-		return printVerticalMultiBox(list.toArray(new String[list.size()]));
+	public static String createVerticalMultiBox(List<String> list) {
+		return createVerticalMultiBox(list.toArray(new String[list.size()]));
 	}
 	
 	/**
